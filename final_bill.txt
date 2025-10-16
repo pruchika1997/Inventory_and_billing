@@ -1,6 +1,6 @@
 ID	Name	Category	Quantity	Total
 1001	Wireless Mouse	Electronics	4	122.67
 1003	Milk Gallon	Food	3	10.99
-1005	Summer Dress	Clothing	1	31.50
+1005	Summer Dress	Clothing	2	63.00
 
-Grand Total: 165.17
+Grand Total: 196.67

@@ -1,0 +1,6 @@
+2025-10-16 22:58:02 - INFO - 6 products loaded successfully.
+2025-10-16 22:58:02 - INFO - Order processed: Wireless Mouse | Quantity: 4 | Total: 122.67
+2025-10-16 22:58:02 - INFO - Order processed: Milk Gallon | Quantity: 3 | Total: 10.99
+2025-10-16 22:58:02 - INFO - Order processed: Summer Dress | Quantity: 2 | Total: 63.00
+2025-10-16 22:58:02 - INFO - All orders processed successfully.
+2025-10-16 22:58:02 - INFO - Final bill successfully written to 'final_bill.txt'.
