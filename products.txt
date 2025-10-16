@@ -1,0 +1,6 @@
+1001,Wireless Mouse,Electronics,25.99,50
+1002,Men's Jeans,Clothing,59.50,35
+1003,Milk Gallon,Food,3.49,70
+1004,Gaming Headset,Electronics,89.00,20
+1005,Summer Dress,Clothing,35.00,45
+1006,Loaf of Bread,Food,2.25,90
