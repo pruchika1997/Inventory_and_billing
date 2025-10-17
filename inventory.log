@@ -1,6 +1,4 @@
-2025-10-16 22:58:02 - INFO - 6 products loaded successfully.
-2025-10-16 22:58:02 - INFO - Order processed: Wireless Mouse | Quantity: 4 | Total: 122.67
-2025-10-16 22:58:02 - INFO - Order processed: Milk Gallon | Quantity: 3 | Total: 10.99
-2025-10-16 22:58:02 - INFO - Order processed: Summer Dress | Quantity: 2 | Total: 63.00
-2025-10-16 22:58:02 - INFO - All orders processed successfully.
-2025-10-16 22:58:02 - INFO - Final bill successfully written to 'final_bill.txt'.
+2025-10-17 13:26:57 - INFO - Products: [<inventory_and_billing.models.base_models.Electronics object at 0x00000140925E6660>, <inventory_and_billing.models.base_models.Clothing object at 0x00000140925E67B0>, <inventory_and_billing.models.base_models.Food object at 0x00000140925E6900>, <inventory_and_billing.models.base_models.Electronics object at 0x0000014092567390>, <inventory_and_billing.models.base_models.Clothing object at 0x0000014092567610>, <inventory_and_billing.models.base_models.Food object at 0x0000014092567B10>]
+2025-10-17 13:26:57 - INFO - Order processed: Wireless Mouse | Quantity: 10 | Total: 306.68
+2025-10-17 13:26:57 - INFO - Order processed: Milk Gallon | Quantity: 5 | Total: 18.32
+2025-10-17 13:26:57 - INFO - Order processed: Summer Dress | Quantity: 5 | Total: 157.50

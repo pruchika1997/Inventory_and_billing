@@ -1,10 +1,14 @@
 import unittest
-from io import StringIO
 from unittest.mock import mock_open, patch
 
-# Import your classes here
-from main import Product, Electronics, Clothing, Food, OutofStockError
+# Updated imports from the new modular structure
+from inventory_and_billing.models.base_models import Product, Electronics, Clothing, Food
+from inventory_and_billing.models.exceptions import OutofStockError
+from inventory_and_billing.services.order_processor import process_order
+from inventory_and_billing.services.file_ops import load_products
 
+
+# ------------------ Product Calculation Tests ------------------ #
 class TestProductCalculations(unittest.TestCase):
 
     def test_base_product_total(self):
@@ -27,6 +31,7 @@ class TestProductCalculations(unittest.TestCase):
         self.assertAlmostEqual(f.calculate_total(3), expected, places=2)
 
 
+# ------------------ Order Processing Tests ------------------ #
 class TestOrderProcessing(unittest.TestCase):
 
     def setUp(self):
@@ -37,36 +42,29 @@ class TestOrderProcessing(unittest.TestCase):
         ]
 
     def test_successful_order_reduces_stock(self):
-        product = self.products[0]  # Mouse
-        quantity = 2
-        total = product.calculate_total(quantity)
-        product.stock -= quantity
-        self.assertEqual(product.stock, 3)
-        self.assertAlmostEqual(total, 200 * 2 * 1.18, places=2)
+        order = {"Mouse": 2}
+        grand_total = process_order(self.products, order)
+        self.assertAlmostEqual(grand_total, 200 * 2 * 1.18, places=2)
+        self.assertEqual(self.products[0].stock, 3)
 
     def test_out_of_stock_raises_exception(self):
-        product = self.products[2]  # Milk has 3 in stock
-        quantity = 5
+        order = {"Milk": 5}  # only 3 in stock
         with self.assertRaises(OutofStockError):
-            if product.stock < quantity:
-                raise OutofStockError(f"{product.name} is out of stock.")
+            process_order(self.products, order)
+
+
+# ------------------ File Operations Tests ------------------ #
+class TestFileOperations(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data="E001,Mouse,Electronics,200,5\n")
-    def test_file_read_creates_product(self, mock_file):
-        from main import Electronics
-        products = []
-        with open("products.txt", "r") as file:
-            for line in file:
-                pid, name, category, price, stock = line.strip().split(",")
-                price = float(price)
-                stock = int(stock)
-                if category == "Electronics":
-                    products.append(Electronics(pid, name, category, price, stock))
+    def test_load_products_creates_correct_instance(self, mock_file):
+        products = load_products("mock_products.txt")
         self.assertEqual(len(products), 1)
         self.assertEqual(products[0].name, "Mouse")
         self.assertIsInstance(products[0], Electronics)
 
 
+# ------------------ Bill Calculation Logic ------------------ #
 class TestBillCalculation(unittest.TestCase):
 
     def test_grand_total_calculation(self):
@@ -75,12 +73,7 @@ class TestBillCalculation(unittest.TestCase):
             Electronics("E001", "Mouse", "Electronics", 200, 5),
             Clothing("C001", "Shirt", "Clothing", 100, 10),
         ]
-        grand_total = 0
-        for product in products:
-            if product.name in order:
-                quantity = order[product.name]
-                total = product.calculate_total(quantity)
-                grand_total += total
+        grand_total = process_order(products, order)
         expected_total = (200 * 2 * 1.18) + (100 * 1 * 0.9)
         self.assertAlmostEqual(grand_total, expected_total, places=2)
 

@@ -1,0 +1,8 @@
+2025-10-17 13:25:36 - INFO - Products: [<inventory_and_billing.models.base_models.Electronics object at 0x000001AD734DA510>, <inventory_and_billing.models.base_models.Clothing object at 0x000001AD734DA660>, <inventory_and_billing.models.base_models.Food object at 0x000001AD734DA7B0>, <inventory_and_billing.models.base_models.Electronics object at 0x000001AD73457390>, <inventory_and_billing.models.base_models.Clothing object at 0x000001AD73457610>, <inventory_and_billing.models.base_models.Food object at 0x000001AD73457B10>]
+2025-10-17 13:25:36 - INFO - Order processed: Wireless Mouse | Quantity: 10 | Total: 306.68
+2025-10-17 13:25:36 - INFO - Order processed: Milk Gallon | Quantity: 5 | Total: 18.32
+2025-10-17 13:25:36 - INFO - Order processed: Summer Dress | Quantity: 5 | Total: 157.50
+2025-10-17 13:26:31 - INFO - Products: [<inventory_and_billing.models.base_models.Electronics object at 0x00000210DC306510>, <inventory_and_billing.models.base_models.Clothing object at 0x00000210DC306660>, <inventory_and_billing.models.base_models.Food object at 0x00000210DC3067B0>, <inventory_and_billing.models.base_models.Electronics object at 0x00000210DC27F390>, <inventory_and_billing.models.base_models.Clothing object at 0x00000210DC27F610>, <inventory_and_billing.models.base_models.Food object at 0x00000210DC27FB10>]
+2025-10-17 13:26:31 - INFO - Order processed: Wireless Mouse | Quantity: 10 | Total: 306.68
+2025-10-17 13:26:31 - INFO - Order processed: Milk Gallon | Quantity: 5 | Total: 18.32
+2025-10-17 13:26:31 - INFO - Order processed: Summer Dress | Quantity: 5 | Total: 157.50
