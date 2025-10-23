@@ -2,3 +2,70 @@
 2025-10-17 13:26:57 - INFO - Order processed: Wireless Mouse | Quantity: 10 | Total: 306.68
 2025-10-17 13:26:57 - INFO - Order processed: Milk Gallon | Quantity: 5 | Total: 18.32
 2025-10-17 13:26:57 - INFO - Order processed: Summer Dress | Quantity: 5 | Total: 157.50
+2025-10-21 14:55:43 - INFO - ---- Execution Started: load_products ----
+2025-10-21 14:55:43 - INFO - Products: [<inventory_and_billing.models.base_models.Electronics object at 0x000001E633306510>, <inventory_and_billing.models.base_models.Clothing object at 0x000001E633306660>, <inventory_and_billing.models.base_models.Food object at 0x000001E6333067B0>, <inventory_and_billing.models.base_models.Electronics object at 0x000001E633287390>, <inventory_and_billing.models.base_models.Clothing object at 0x000001E633287610>, <inventory_and_billing.models.base_models.Food object at 0x000001E633287B10>]
+2025-10-21 14:55:43 - INFO - ---- Execution Ended: load_products in 0.02 ----
+2025-10-21 14:55:43 - INFO - ---- Execution Started: process_order ----
+2025-10-21 14:55:43 - INFO - Order processed: Wireless Mouse | Quantity: 10 | Total: 306.68
+2025-10-21 14:55:43 - INFO - Order processed: Milk Gallon | Quantity: 20 | Total: 73.29
+2025-10-21 14:55:43 - INFO - Order processed: Summer Dress | Quantity: 10 | Total: 315.00
+2025-10-21 14:55:43 - INFO - ---- Execution Ended: process_order in 0.00 ----
+2025-10-21 14:55:43 - INFO - ---- Execution Started: write_bill ----
+2025-10-21 14:55:43 - INFO - ---- Execution Ended: write_bill in 0.00 ----
+2025-10-21 15:50:31 - INFO - ---- Execution Started: load_products ----
+2025-10-21 15:50:31 - INFO - ---- Execution Ended: load_products in 0.00 ----
+2025-10-21 15:50:31 - INFO - ---- Execution Started: process_order ----
+2025-10-21 15:50:31 - INFO - ---- Execution Ended: process_order in 0.00 ----
+2025-10-21 15:50:31 - INFO - ---- Execution Started: write_bill ----
+2025-10-21 15:50:31 - INFO - ---- Execution Ended: write_bill in 0.00 ----
+2025-10-21 15:50:31 - ERROR - Error while writting bill: module 'aiofiles' has no attribute 'pen'
+2025-10-21 15:54:23 - INFO - ---- Execution Started: load_products ----
+2025-10-21 15:54:23 - INFO - ---- Execution Ended: load_products in 0.00 ----
+2025-10-21 15:54:23 - INFO - Products: [<inventory_and_billing.models.base_models.Electronics object at 0x000002123EBFC6E0>, <inventory_and_billing.models.base_models.Clothing object at 0x000002123EBFCAD0>, <inventory_and_billing.models.base_models.Food object at 0x000002123EBFCC20>, <inventory_and_billing.models.base_models.Electronics object at 0x000002123E6FB890>, <inventory_and_billing.models.base_models.Clothing object at 0x000002123E6FBB10>, <inventory_and_billing.models.base_models.Food object at 0x000002123E6FBC50>]
+2025-10-21 15:54:23 - INFO - ---- Execution Started: process_order ----
+2025-10-21 15:54:23 - INFO - ---- Execution Ended: process_order in 0.00 ----
+2025-10-21 15:54:23 - ERROR - 'async for' requires an object with __aiter__ method, got list
+Traceback (most recent call last):
+  File "C:\Users\ruchikap\OneDrive\Documents\GitHub\Inventory_and_billing\inventory_and_billing\main.py", line 14, in main
+    grand_total = await process_order(products, order)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ruchikap\OneDrive\Documents\GitHub\Inventory_and_billing\inventory_and_billing\services\order_processor.py", line 8, in process_order
+    async for product in products:
+                         ^^^^^^^^
+TypeError: 'async for' requires an object with __aiter__ method, got list
+2025-10-21 15:55:33 - INFO - ---- Execution Started: load_products ----
+2025-10-21 15:55:33 - INFO - ---- Execution Ended: load_products in 0.00 ----
+2025-10-21 15:55:33 - INFO - Products: [<inventory_and_billing.models.base_models.Electronics object at 0x000001D66F6F46E0>, <inventory_and_billing.models.base_models.Clothing object at 0x000001D66F6F4590>, <inventory_and_billing.models.base_models.Food object at 0x000001D66F6F4C20>, <inventory_and_billing.models.base_models.Electronics object at 0x000001D66F207C50>, <inventory_and_billing.models.base_models.Clothing object at 0x000001D66F207D90>, <inventory_and_billing.models.base_models.Food object at 0x000001D66F2079D0>]
+2025-10-21 15:55:33 - INFO - ---- Execution Started: process_order ----
+2025-10-21 15:55:33 - INFO - ---- Execution Ended: process_order in 0.00 ----
+2025-10-21 15:55:33 - ERROR - 'async for' requires an object with __aiter__ method, got list
+Traceback (most recent call last):
+  File "C:\Users\ruchikap\OneDrive\Documents\GitHub\Inventory_and_billing\inventory_and_billing\main.py", line 14, in main
+    grand_total = await process_order(products, order)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ruchikap\OneDrive\Documents\GitHub\Inventory_and_billing\inventory_and_billing\services\order_processor.py", line 8, in process_order
+    async for product in products:
+                         ^^^^^^^^
+TypeError: 'async for' requires an object with __aiter__ method, got list
+2025-10-21 15:57:46 - INFO - ---- Execution Started: load_products ----
+2025-10-21 15:57:46 - INFO - ---- Execution Ended: load_products in 0.00 ----
+2025-10-21 15:57:46 - INFO - Products loaded: 6 items
+2025-10-21 15:57:46 - INFO - ---- Execution Started: process_order ----
+2025-10-21 15:57:46 - INFO - ---- Execution Ended: process_order in 0.00 ----
+2025-10-21 15:57:46 - INFO - Order processed: Wireless Mouse | Quantity: 10 | Total: 306.68
+2025-10-21 15:57:46 - INFO - Order processed: Milk Gallon | Quantity: 5 | Total: 18.32
+2025-10-21 15:57:46 - INFO - Order processed: Summer Dress | Quantity: 5 | Total: 157.50
+2025-10-21 15:57:46 - INFO - ---- Execution Started: write_bill ----
+2025-10-21 15:57:46 - INFO - ---- Execution Ended: write_bill in 0.00 ----
+2025-10-21 15:57:46 - INFO - Bill written successfully to data/final_bill.txt
+2025-10-21 15:58:37 - INFO - ---- Execution Started: load_products ----
+2025-10-21 15:58:37 - INFO - ---- Execution Ended: load_products in 0.00 ----
+2025-10-21 15:58:37 - INFO - Products loaded: 6 items
+2025-10-21 15:58:37 - INFO - ---- Execution Started: process_order ----
+2025-10-21 15:58:37 - INFO - ---- Execution Ended: process_order in 0.00 ----
+2025-10-21 15:58:37 - INFO - Order processed: Wireless Mouse | Quantity: 10 | Total: 306.68
+2025-10-21 15:58:37 - INFO - Order processed: Milk Gallon | Quantity: 5 | Total: 18.32
+2025-10-21 15:58:37 - INFO - Order processed: Summer Dress | Quantity: 5 | Total: 157.50
+2025-10-21 15:58:37 - INFO - ---- Execution Started: write_bill ----
+2025-10-21 15:58:37 - INFO - ---- Execution Ended: write_bill in 0.00 ----
+2025-10-21 15:58:37 - INFO - Bill written successfully to data/final_bill.txt
